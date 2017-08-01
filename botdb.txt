@@ -1,0 +1,7 @@
+CREATE TABLE votes (
+  postid TEXT,
+  weight NUMERIC,
+  voter TEXT,
+  reward NUMERIC,
+  PRIMARY KEY (postid)
+);
