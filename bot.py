@@ -51,7 +51,7 @@ def main(lastblock):
   return thisblock
 
 def followvote(op):
-  if op['weight'] <= 1 or op['voter'] not in follow or op['author'] in except_authors or op['author'] == op['voter'] or (op['voter'] in clones and op['au$
+  if op['weight'] <= 1 or op['voter'] not in follow or op['author'] in except_authors or op['author'] == op['voter'] or (op['voter'] in clones and op['author'] in clones[op['voter']]):
     return False
 
   print("Valid vote found by "+op['voter']+" ("+str(op['weight'])+")")
